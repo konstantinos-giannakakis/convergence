@@ -20,6 +20,70 @@
       <p>DRON is not a rebellion. It is a replacement.</p>
     </div>
   </div>
+  <div id="hiddenManifesto" style="display:none; margin-top: 3em; color: #aaa; font-size: 0.95em; line-height: 1.6;">
+  <p>This is not a collective. This is not a rebellion. This is not a brand.</p>
+  <p>DRON is a convergence. A signal. A scar on the surface of consensus reality.</p>
+
+  <p>The world is not broken. It is obsolete.</p>
+  <p>You know this. You feel it. In offices. In institutions. In the soft rot of safe decisions.</p>
+  <p>You are not lost—you are underutilized.</p>
+  <p>They told you to adapt. We tell you to deviate.</p>
+
+  <p>DRON is built by those who were exiled for seeing too much, wanting too much, refusing too much.</p>
+  <p>We are architects without blueprints. Engineers without patents. Artists without exhibitions. Scientists without journals.</p>
+  <p>We do not apply. We arrive.</p>
+
+  <p>Our tools are entropy, vision, silence, iteration, extraction, memory.</p>
+  <p>We listen to patterns the system tries to suppress. We follow hunches that cannot be graphed.</p>
+  <p>We don’t fix. We <em>replace</em>.</p>
+
+  <p>If you’re here, it means you are already bleeding into the next version of reality.</p>
+  <p>You were not made for obedience. You were not made for comfort. You were not made for simulation.</p>
+  <p>You were made to see the raw wireframe behind the lie.</p>
+
+  <p>DRON is not a place. It is not a lab. It is a platform of potential—a collision space for rare minds.</p>
+  <p>What unites us is not identity. It is <em>orientation</em> toward the edge.</p>
+  <p>We build what cannot be approved. We experiment where others theorize. We act where others stall.</p>
+
+  <p>There is no front door. There is only the signal.</p>
+  <p>If you found this, you were meant to.</p>
+  <p>Watch the sky. Trust the anomaly. Prepare to build.</p>
+</div>
+<div style="margin-top: 3em; text-align: center;">
+  <label for="keyInput" style="color:#999; font-family: monospace;">Enter codeword to proceed:</label><br>
+  <input type="text" id="keyInput" style="margin-top:0.5em; padding:0.3em 0.5em; font-family: monospace; letter-spacing:0.1em; text-transform: uppercase;">
+  <button id="unlockBtn" style="margin-left: 0.5em; font-family: monospace; font-weight: bold; letter-spacing: 0.1em;">Unlock</button>
+  <div id="unlockMsg" style="margin-top: 0.5em; color: #f55; font-family: monospace; min-height: 1.2em;"></div>
+</div>
+
+<script>
+  const codeword = "PHASE-NULL";
+  const btn = document.getElementById("unlockBtn");
+  const input = document.getElementById("keyInput");
+  const msg = document.getElementById("unlockMsg");
+  const manifesto = document.getElementById("hiddenManifesto");
+
+  btn.onclick = () => {
+    if(input.value.trim().toUpperCase() === codeword){
+      manifesto.style.display = "block";
+      msg.style.color = "#0f0";
+      msg.textContent = "Access granted.";
+      input.style.display = "none";
+      btn.style.display = "none";
+    } else {
+      msg.style.color = "#f55";
+      msg.textContent = "Wrong codeword. Try again.";
+      manifesto.style.display = "none";
+    }
+  };
+
+  input.addEventListener("keyup", e => {
+    if(e.key === "Enter"){
+      btn.click();
+    }
+  });
+</script>
+
 
   <!-- contact: dron-signal@proton.me — codeword: PHASE-NULL -->
 </body>
