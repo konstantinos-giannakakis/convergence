@@ -32,3 +32,15 @@ h1 {
   margin: 0.7em 0;
   line-height: 1.6;
 }
+
+.manifesto.deeper {
+  font-size: 0.95em;
+  color: #aaa;
+  margin-top: 3em;
+  opacity: 0.85;
+  transition: opacity 0.8s ease-in;
+}
+
+.manifesto.deeper:hover {
+  opacity: 1;
+}
